@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Hussein Galal
+  description: Install and configure newrelic agent for php5
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  categories:
+  - monitoring
+  - system
+  - web
+dependencies: []

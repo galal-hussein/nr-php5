@@ -1,0 +1,53 @@
+---
+# General Settings
+newrelic_license: ""
+newrelic_logfile: "/var/log/newrelic/php_agent.log"
+newrelic_loglevel: "info"
+newrelic_high_security: "false"
+newrelic_appname: "PHP Application"
+
+# Daemon Settings
+newrelic_daemon_logfile: "/var/log/newrelic/newrelic-daemon.log"
+newrelic_daemon_loglevel: "info"
+newrelic_daemon_port: "/tmp/.newrelic.sock"
+newrelic_daemon_ssl: "true"
+newrelic_daemon_ssl_ca_bundle: ""
+newrelic_daemon_ssl_ca_path: ""
+newrelic_daemon_proxy: ""
+newrelic_daemon_pidfile: ""
+newrelic_daemon_location: "/usr/bin/newrelic-daemon"
+newrelic_daemon_collector_host: "collector.newrelic.com"
+newrelic_daemon_dont_launch: 0
+newrelic_daemon_auditlog: "/var/log/newrelic/audit.log"
+
+# Error Handling Settings
+newrelic_error_collector_enabled: "true"
+newrelic_error_collector_record_database_errors: "false"
+newrelic_error_collector_prioritize_api_errors: "false"
+
+# Transaction Tracer Settings
+newrelic_transaction_tracer_enabled: "true"
+newrelic_transaction_tracer_threshold: "apdex_f"
+newrelic_transaction_tracer_detail: 1
+newrelic_transaction_tracer_slow_sql: "true"
+newrelic_transaction_tracer_stack_trace_threshold: 500
+newrelic_transaction_tracer_explain_enabled: "true"
+newrelic_transaction_tracer_explain_threshold: 500
+newrelic_transaction_tracer_record_sql: "obfuscated"
+newrelic_transaction_tracer_custom: ""
+newrelic_transaction_tracer_attributes_enabled: "true"
+newrelic_transaction_events_attributes_enabled: "true"
+newrelic_transaction_events_enabled: "true"
+
+# Misc Settings
+newrelic_attributes_enabled: "true"
+newrelic_error_collector_attributes_enabled: "true"
+newrelic_browser_monitoring_attributes_enabled: "false"
+newrelic_feature_flag: ""
+newrelic_labels: ""
+newrelic_synthetics_enabled: "true"
+newrelic_cross_application_tracer_enabled: "true"
+newrelic_browser_monitoring_auto_instrument: "true"
+
+php_modules_dest: /etc/php5/mods-available
+php_server: php5-fpm

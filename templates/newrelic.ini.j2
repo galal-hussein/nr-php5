@@ -1,0 +1,59 @@
+extension = "newrelic.so"
+
+[newrelic]
+
+# General Settings
+newrelic.enabled = true
+newrelic.license = "{{ newrelic_license }}"
+newrelic.logfile = "{{ newrelic_logfile }}"
+newrelic.loglevel = "{{ newrelic_loglevel }}"
+newrelic.high_security = {{ newrelic_high_security }}
+newrelic.appname = "{{ newrelic_appname }}"
+
+# Daemon Settings
+newrelic.daemon.logfile = "{{ newrelic_daemon_logfile }}"
+newrelic.daemon.loglevel = "{{ newrelic_daemon_loglevel }}"
+newrelic.daemon.port = "{{ newrelic_daemon_port }}"
+newrelic.daemon.ssl = "{{ newrelic_daemon_ssl }}"
+newrelic.daemon.ssl_ca_bundle = "newrelic_daemon_ssl_ca_bundle"
+newrelic.daemon.ssl_ca_path = "{{ newrelic_daemon_ssl_ca_path }}"
+newrelic.daemon.proxy = "{{ newrelic_daemon_proxy }}"
+newrelic.daemon.pidfile = "{{ newrelic_daemon_pidfile }}"
+newrelic.daemon.location = "{{ newrelic_daemon_location }}"
+newrelic.daemon.collector_host = "{{ newrelic_daemon_collector_host }}"
+newrelic.daemon.dont_launch = {{ newrelic_daemon_dont_launch }}
+newrelic.daemon.auditlog = "{{ newrelic_daemon_auditlog }}"
+
+# Error Handling Settings
+newrelic.error_collector.enabled = {{ newrelic_error_collector_enabled }}
+newrelic.error_collector.record_database_errors = {{ newrelic_error_collector_record_database_errors }}
+newrelic.error_collector.prioritize_api_errors = {{ newrelic_error_collector_prioritize_api_errors }}
+
+# Transaction Tracer Settings
+newrelic.transaction_tracer.enabled = {{ newrelic_transaction_tracer_enabled }}
+newrelic.transaction_tracer.threshold = "{{ newrelic_transaction_tracer_threshold }}"
+newrelic.transaction_tracer.detail = {{ newrelic_transaction_tracer_detail }}
+newrelic.transaction_tracer.slow_sql = {{ newrelic_transaction_tracer_slow_sql }}
+newrelic.transaction_tracer.stack_trace_threshold = {{ newrelic_transaction_tracer_stack_trace_threshold }}
+newrelic.transaction_tracer.explain_enabled = {{ newrelic_transaction_tracer_explain_enabled }}
+newrelic.transaction_tracer.explain_threshold = {{ newrelic_transaction_tracer_explain_threshold }}
+newrelic.transaction_tracer.record_sql = "{{ newrelic_transaction_tracer_record_sql }}"
+newrelic.transaction_tracer.custom = "{{ newrelic_transaction_tracer_custom }}"
+newrelic.transaction_tracer.attributes.enabled = {{ newrelic_transaction_tracer_attributes_enabled }}
+newrelic.transaction_events.attributes.enabled = {{ newrelic_transaction_events_attributes_enabled }}
+newrelic.transaction_events.enabled = {{ newrelic_transaction_events_enabled }}
+
+# Framework Specific Settings
+newrelic.webtransaction.name.remove_trailing_path = {{ newrelic_webtransaction_name_remove_trailing_path }}
+newrelic.webtransaction.name.functions = "{{ newrelic_webtransaction_name_functions }}"
+newrelic.webtransaction.name.files = "{{ newrelic_webtransaction_name_files }}"
+
+# Misc Settings
+newrelic.attributes.enabled = {{ newrelic_attributes_enabled }}
+newrelic.error_collector.attributes.enabled = {{ newrelic_error_collector_attributes_enabled }}
+newrelic.browser_monitoring.attributes.enabled = {{ newrelic_browser_monitoring_attributes_enabled }}
+newrelic.feature_flag = "{{ newrelic_feature_flag }}"
+newrelic.labels = "{{ newrelic_labels }}"
+newrelic.synthetics.enabled = {{ newrelic_synthetics_enabled }}
+newrelic.cross_application_tracer.enabled = {{ newrelic_cross_application_tracer_enabled }}
+newrelic.browser_monitoring.auto_instrument = {{ newrelic_browser_monitoring_auto_instrument }}

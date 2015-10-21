@@ -1,0 +1,8 @@
+- name: Add Newrelic's APT Repository
+  apt_repository: repo='deb http://apt.newrelic.com/debian/ newrelic non-free' state=present
+
+- name: Add Newrelic's APT key
+  apt_key: url=https://download.newrelic.com/548C16BF.gpg state=present
+
+- name: Install Newrelic's PHP Agent
+  apt: name=newrelic-php5 state=present update_cache=yes

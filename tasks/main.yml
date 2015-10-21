@@ -1,0 +1,13 @@
+---
+- name: Run The Debian Version
+  include: debian.yml
+  when: ansible_os_family == 'Debian'
+
+- name: Run The Redhat Version
+  include: redhat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Add Newrelic PHP configuration
+  template: src=newrelic.ini.j2 dest={{ php_modules_dest }}/newrelic.ini mode="0644" owner=root group=root
+  notify:
+      - Restart PHP Server
